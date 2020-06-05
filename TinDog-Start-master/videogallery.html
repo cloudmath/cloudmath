@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CloudMath</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+
+    #title {
+      background-color: #C6E2FF;
+      color: #a4a4a4;
+
+    }
+
+    h1 {
+      font-family: "Montserrat-Black";
+      font-size: 3rem;
+      line-height: 1.5;
+      font-weight: bolder;
+      }
+      .container-fluid{
+        padding: 3% 15% 7%;
+      }
+      #navbarbrand{
+        font-size: 1.5rem;
+        padding-right: 40%;
+        color:#a3a3a3;
+      }
+      .navbar{
+        padding-bottom: 4.5rem;
+        color:#a3a3a3;
+      }
+      #navbar1{
+        color:#a3a3a3;
+      }
+
+      .nav-item{
+        padding:0 18px;
+        color:#a3a3a3;
+      }
+      .download-button{
+        margin:5% 3% 5% 0%;
+      }
+      .title-image{
+        width:60%;
+        transform: rotate(25deg);
+        position:absolute;
+        right: 30%
+
+      }
+      .nav-link{
+        color:#a3a3a3;
+      }
+      .feature-box{
+        text-align:center;
+        padding: 5%;
+      }
+      #features{
+        padding: 7% 15%;
+        background-color: #fff;
+        position:relative;
+        z-index:1;
+      }
+      h3{
+       font-weight: bolder;
+      }
+      p{
+        color:#8f8f8f;
+      }
+      .icon{
+        color: #a3a3a3;
+        margin-bottom: 1rem;
+
+      }
+      .icon:hover{
+        color:#C6E2FF;
+      }
+      .social-icon:hover{
+        color:#a3a3a3;
+      }
+      #testimonials{
+
+        text-align: center;
+        background-color: #a3a3a3;
+        color:#fff;
+      }
+      h2{
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+      .testimonial-image{
+        width:10%;
+        border-radius:100%;
+        margin: 20px;
+      }
+      #press {
+          background-color: #ef8172;
+          text-align: center;
+          padding-bottom: 3%;
+
+      }
+      .press-logo{
+        width:15%;
+        margin: 20px 20px 50px;
+      }
+      .carousel-item{
+        padding:7% 15%;
+      }
+      .pricing{
+        text-align:center;
+        font-weight: bolder;
+        margin-top: 10px;
+        font-size: 2.5rem;
+      }
+      .pricingpara{
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      .card-title{
+        font-weight: bolder;
+        font-size: 2rem;
+      }
+      .my-0{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color:#444444;
+      }
+      @media(max-width:1028px){
+
+        #title{
+          text-align:center;
+        }
+        .title-image{
+          position:static;
+          transform: rotate(0);
+        }
+      }
+      #cta{
+        background-color:#C6E2FF;
+        color: #a3a3a3;
+        padding: 7% 15%;
+        text-align: center;
+
+
+      }
+      .card-deck{
+        padding:3% 2%;
+      }
+      .cta-heading{
+        font-weight: bolder;
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+      #footer{
+        padding: 7% 15%;
+        text-align:center;
+      }
+      .social-icon{
+        margin: 20px 10px;
+      }
+      .brand{
+        color:#a3a3a3;
+      }
+      .dropdown-menu{
+        background-color: #a3a3a3;
+      }
+      .dropdown-item{
+        color:#C6E2FF;
+      }
+      .dropdown-item:hover{
+        background-color: #303030;
+        color:#C6E2FF;
+      }
+      .emailconservation{
+        color:#00FA9A;
+      }
+      .dropdown-divider{
+        background-color:#303030;
+      }
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color:#00FA9A;
+      }
+      }
+      .custom-control-input:active~.custom-control-label::before{
+          background-color:green;
+      }
+
+      /** focus shadow green **/
+      .custom-checkbox .custom-control-input:focus~.custom-control-label::before{
+          box-shadow:0 0 0 0.05rem #00FA9A;
+          border-color: #00FA9A;
+}
+
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 200px;
+    caret-color:#C6E2FF;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #C6E2FF;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+#front-button{
+  margin-top: 1.5px;
+}
+.carouseltext{
+  padding-bottom: 30px;
+}
+.carouselheading{
+  padding-top: 30px;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <section id="title">
+
+<div class="container-fluid">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a id="navbarbrand" class="navbar-brand" href="file:///C:/HTML/TinDog-Start-master/index.html#">CloudMath</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a id="navbar1" class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbar1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resources
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">AMC8</a>
+          <a class="dropdown-item" href="file:///C:/HTML/TinDog-Start-master/videogallery.html#">Videos</a>
+          <a class="dropdown-item" href="#">Exercises</a>
+          <a class="dropdown-item" href="https://www.youtube.com/channel/UCCYx6JnYWG0Hn6kGnfXOEnQ">Youtube Channel</a>
+          <a class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="file:///C:/HTML/TinDog-Start-master/videogallery.html#">Algebra</a>
+            <a class="dropdown-item" href="file:///C:/HTML/TinDog-Start-master/videogallery.html#">Geometry</a>
+          </div>
+      </li>
+      <li>
+        <div class="container h-100">
+             <div class="d-flex justify-content-center h-100">
+
+                 <div class="searchbar">
+                     <input class="search_input" id="myInput" type="text" onkeyup="myFunction()" name="" placeholder="Search...">
+                     <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+
+                 </div>
+             </div>
+         </div>
+</li>
+            </ul>
+            </div>
+    </nav>
+  <!-- Title -->
+  <h1>Explore our video gallery.</h1>
+  <div id="Geometry">
+    <h3>Geometry.</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_uPYAnlzTG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="Algebra">
+  <h3>Algebra.</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bxEgyvKRJGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+    <!-- Footer -->
+
+  <footer id="footer">
+    <a href="https://www.youtube.com/channel/UCCYx6JnYWG0Hn6kGnfXOEnQ"><i class="social-icon fab fa-youtube"></i></a>
+    <a href="https://twitter.com/CloudMath2"><i class="social-icon fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/cloudmath/"><i class="social-icon fab fa-instagram"></i></a>
+    <a href="mailto:cloudmath.learn@gmail.com"><i class="social-icon fas fa-envelope"></i></a>
+    <p>© Copyright CloudMath 2020 </p>
+
+  </footer>
+  <script>
+  <html lang="en">
+    <head>
+      <meta name="google-signin-scope" content="profile email">
+      <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+    <body>
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      <script>
+        function onSignIn(googleUser) {
+
+          var profile = googleUser.getBasicProfile();
+          console.log("ID: " + profile.getId());
+          console.log('Full Name: ' + profile.getName());
+          console.log('Given Name: ' + profile.getGivenName());
+          console.log('Family Name: ' + profile.getFamilyName());
+          console.log("Email: " + profile.getEmail());
+
+
+          var id_token = googleUser.getAuthResponse().id_token;
+          console.log("ID Token: " + id_token);
+        }
+
+</script>
+
+</body>
+
+</html>
